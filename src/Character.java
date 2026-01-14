@@ -10,6 +10,7 @@ public class Character {
         this.health = health;
         this.strength = strength;
         this.speed = speed;
+        this.equipped = null;
     }
     public String getName() {
         return name;

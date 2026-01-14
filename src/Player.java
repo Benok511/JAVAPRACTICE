@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
+public class Player extends Character {
 
-public class Player {
 }
