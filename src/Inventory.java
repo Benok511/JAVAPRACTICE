@@ -41,6 +41,10 @@ public class Inventory {
         this.weight -= item.getWeight();
         return item;
     }
+    
+    public int length(){
+        return items.size();
+    }
 
 
 }
