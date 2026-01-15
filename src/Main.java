@@ -13,6 +13,14 @@ public class Main {
         System.out.println(p.getDamage());
         System.out.println(p.getDamage());
 
+        try{
+            Player test = new Player("ben",-100,-2,-1,100);
+        }catch(IllegalArgumentException error) {
+            System.out.println(error.getMessage());
+        }
+
+        Player test2 = new Player("ben",100,100,100,100);
+        test2.buyStats("strength",20);
 
     }
 }

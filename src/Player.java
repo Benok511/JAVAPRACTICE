@@ -44,5 +44,36 @@ public class Player extends Character {
         inventory.removeItem(index);
     }
 
+    public void buyStats(String stat,int amount){
+        if (!stat.equals("health")  && !stat.equals("strength")  && !stat.equals("speed") ){
+            throw new IllegalArgumentException( "That is not a valid stat!");
+        }
+
+        if (amount < 0){
+            throw new IllegalArgumentException("amount must be positive");
+        }
+
+        if (amount > getMoney()){
+            throw new IllegalArgumentException("You don't have enough money!");
+
+        }
+
+        if (stat.equals("health")){
+            setMoney(getMoney() - amount);
+            setHealth(getHealth() + amount);
+            System.out.println("You purchased " + amount + " " + stat + ". You now have " + getHealth() + " " + stat);
+
+        } else if (stat.equals("strength")){
+            setMoney(getMoney() - amount);
+            setStrength(getStrength() + amount);
+            System.out.println("You purchased " + amount + " " + stat + ". You now have " + getStrength() + " " + stat);
+
+        } else{
+            setMoney(getMoney() - amount);
+            setSpeed(getSpeed() + amount);
+            System.out.println("You purchased " + amount + " " + stat + ". You now have " + getSpeed() + " " + stat);
+        }
+    }
+
 
 }

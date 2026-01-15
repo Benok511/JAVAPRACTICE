@@ -6,6 +6,16 @@ public class Character {
     private Item equipped = null;
 
     public Character(String name, int health, int strength, int speed) {
+        if (health < 0){
+            throw new IllegalArgumentException("Health must be positive");
+        }
+        if (strength < 0){
+            throw new IllegalArgumentException("Strength must be positive");
+        }
+        if (speed < 0){
+            throw new IllegalArgumentException("speed must be positive");
+        }
+
         this.name = name;
         this.health = health;
         this.strength = strength;
