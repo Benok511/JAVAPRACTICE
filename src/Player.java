@@ -38,7 +38,7 @@ public class Player extends Character {
     }
 
     public void dropItem(int index){
-        if(index < 0 || index > inventory.length()){
+        if(index < 0 || index > inventory.length() - 1){
             throw new IndexOutOfBoundsException("Not valid cell in inventory");
         }
         inventory.removeItem(index);
@@ -58,22 +58,26 @@ public class Player extends Character {
 
         }
 
+        setMoney(getMoney() - amount);
+
         if (stat.equals("health")){
-            setMoney(getMoney() - amount);
+
             setHealth(getHealth() + amount);
             System.out.println("You purchased " + amount + " " + stat + ". You now have " + getHealth() + " " + stat);
 
         } else if (stat.equals("strength")){
-            setMoney(getMoney() - amount);
+
             setStrength(getStrength() + amount);
             System.out.println("You purchased " + amount + " " + stat + ". You now have " + getStrength() + " " + stat);
 
         } else{
-            setMoney(getMoney() - amount);
+
             setSpeed(getSpeed() + amount);
             System.out.println("You purchased " + amount + " " + stat + ". You now have " + getSpeed() + " " + stat);
         }
     }
+
+
 
 
 }

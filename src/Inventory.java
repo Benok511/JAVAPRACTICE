@@ -23,10 +23,12 @@ public class Inventory {
     }
 
     public int getWeight(){
+
         return this.weight;
     }
 
     public Item getItem(int index){
+
         return items.get(index);
     }
 

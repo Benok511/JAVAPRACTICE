@@ -22,5 +22,7 @@ public class Main {
         Player test2 = new Player("ben",100,100,100,100);
         test2.buyStats("strength",20);
 
+
+
     }
 }

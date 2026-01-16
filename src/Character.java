@@ -1,3 +1,9 @@
+/**
+ * Base class for players and enemies represents the properties of all characters in the game
+ * @author EVIL GUAVA
+ * @version 1.0
+ */
+
 public class Character {
     private String name;
     private int health;
@@ -5,7 +11,16 @@ public class Character {
     private int speed;
     private Item equipped = null;
 
+    /**
+     * Constructor for character class
+     * @param  name - name of character
+     * @param health - base health
+     * @param  strength - base strength - corresponds to damage dealt
+     * @param  speed - base speed - corresponds to chars running speed
+     * @throws IllegalArgumentException if health or strength or speed is negative
+     */
     public Character(String name, int health, int strength, int speed) {
+
         if (health < 0){
             throw new IllegalArgumentException("Health must be positive");
         }
