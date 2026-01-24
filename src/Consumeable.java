@@ -1,0 +1,24 @@
+public class Consumeable extends Item {
+    private String stat;
+    private int statAmount;
+
+    public Consumeable(String name, int value, int weight, String stat, int statAmount){
+        super(name,value,weight);
+        if (!stat.equals("health") && !stat.equals("strenght") && !stat.equals("speed")){
+            throw new IllegalArgumentException("stat must be a valid stat of a character - (health,speed,strength)");
+
+        }
+        if (statAmount < 0){
+            throw new IllegalArgumentException("statAmount must be a positive int!");
+        }
+        this.stat = stat;
+        this.statAmount = statAmount;
+    }
+
+    public String getStat(){
+        return stat;
+    }
+    public int getStatAmount(){
+        return statAmount;
+    }
+}

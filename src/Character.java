@@ -9,7 +9,7 @@ public class Character {
     private int health;
     private int strength;
     private int speed;
-    private Item equipped = null;
+    private Item equipped;
 
     /**
      * Constructor for character class
@@ -38,34 +38,40 @@ public class Character {
         this.equipped = null;
     }
     public String getName() {
+
         return name;
     }
     public void setName(String name) {
+
         this.name = name;
     }
     public int getHealth() {
+
         return health;
     }
     public void setHealth(int health) {
+
         this.health = health;
     }
     public int getStrength() {
+
         return strength;
     }
     public void setStrength(int strength) {
+
         this.strength = strength;
     }
     public int getSpeed() {
+
         return speed;
     }
     public void setSpeed(int speed) {
+
         this.speed = speed;
     }
     public Item getEquipped() {
+
         return equipped;
-    }
-    public void setEquipped(Item equipped) {
-        this.equipped = equipped;
     }
 
     @Override
@@ -74,18 +80,22 @@ public class Character {
     }
 
     public void equip(Item item) {
+
         equipped = item;
     }
 
     public void unequip() {
+
         equipped = null;
     }
 
     public Item getEquippedItem() {
+
         return equipped;
     }
 
     public boolean isDead(){
+
         return health <= 0;
     }
 
